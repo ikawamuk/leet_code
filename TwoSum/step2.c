@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
-struct tuple
+struct node
 {
 	int		idx;
 	int		value;
@@ -9,7 +9,7 @@ struct tuple
 
 int	hash(unsigned int seed)
 {
-	return (seed % 20007);
+	return (seed % 40007);
 }
 
 /**
@@ -19,7 +19,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 {
 	*returnSize = 2;
 	int				*answer = malloc(*returnSize * sizeof(int));
-	struct tuple	hash_map[50000] = {0};
+	struct node		hash_map[50000] = {0};
 
 	for (int i = 0; i < numsSize; i++)
 	{
