@@ -20,7 +20,7 @@ struct TreeNode* sortedArrayToBST(int* nums, int numsSize)
 {
 	if (!nums || numsSize == 0)
 		return (NULL);
-	struct TreeNode	*node = calloc(1, sizeof(struct TreeNode));
+	struct TreeNode	*node = malloc(sizeof(struct TreeNode));
 	int	mid = numsSize / 2;
 	node->val = nums[mid];
 	node->left = sortedArrayToBST(nums, mid);
