@@ -18,9 +18,7 @@ struct TreeNode {
 
 int maxDepth(struct TreeNode* root)
 {
-	int	depth = 0;
-
-	return (get_depth(root, depth));
+	return (get_depth(root, 0));
 }
 
 int	get_depth(struct TreeNode* node, int depth)
