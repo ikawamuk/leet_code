@@ -23,11 +23,7 @@ struct TreeNode* sortedArrayToBST(int* nums, int numsSize)
 	struct TreeNode	*node = calloc(1, sizeof(struct TreeNode));
 	int	mid = numsSize / 2;
 	node->val = nums[mid];
-	if (numsSize == 1)
-		return (node);
 	node->left = sortedArrayToBST(nums, mid);
-	if (numsSize == 2)
-		return (node);
 	node->right = sortedArrayToBST(nums + mid + 1, numsSize - mid - 1);
 	return (node);
 }
